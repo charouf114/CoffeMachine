@@ -1,6 +1,10 @@
 # CoffeMachine
+The Project is composed on
 
-The DB should be like this
+Client Side : CoffeApp Created on WPF
+Server Side : CoffeServices Creaded on ASP.Net Core 3.1
+
+The DB Schema should be like this
 
 CREATE TABLE Drink.dbo.Drink (
   BudgetId varchar(256) NOT NULL,
@@ -10,5 +14,4 @@ CREATE TABLE Drink.dbo.Drink (
   CreationDate date NULL,
   CONSTRAINT PK_BudgetId PRIMARY KEY CLUSTERED (BudgetId)
 )
-ON [PRIMARY]
-GO
+
