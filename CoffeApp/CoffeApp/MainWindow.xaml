@@ -1,0 +1,35 @@
+﻿<Window x:Class="CoffeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoffeApp"
+        mc:Ignorable="d"
+        Title="Coffe App" Height="450" Width="800">
+
+    <StackPanel>
+        <TextBlock Margin="140,0,0,0" FontFamily="Century Gothic" FontSize="12" Text="Add Your Budget Id to check you coffe History" />
+        <TextBox Name="TB_Budget" Margin="0,4,0,0" Width="500" ></TextBox>
+        <Button Margin="0,4,0,0" FontFamily="arial" Width="500" Click="GetLatestCoffe">Check Latest Coffe</Button>
+        <TextBlock Name="TB_Message" FontFamily="Century Gothic" Margin="140,4,0,0" FontSize="12" Text="Here is your last coffe" />
+
+        <TextBlock Margin="140,20,0,0" FontFamily="Century Gothic" FontSize="12" Text="Coffe Type" />
+        <ComboBox Margin="0,4,0,0" Width="500" Name="cmb_DrinkType">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Width="200">
+                        <TextBlock Width="200" Text="{Binding  Value}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+        </ComboBox>
+
+        <TextBlock Margin="140,20,0,0" FontFamily="Century Gothic" FontSize="12" Text="Sucre Quantity" />
+        <TextBox Name="TB_SucarCount" Width="500" Margin="0,4,0,0"></TextBox>
+
+        <TextBlock Margin="140,20,0,0" FontFamily="Century Gothic" FontSize="12" Text="Do You Have a mug ?" />
+        <CheckBox Name="CB_HasMug" Margin="140,0,0,0" FontSize="40" />
+
+        <Button Margin="0,20,0,0" FontFamily="Century Gothic" Width="500" Click="RequestCoffe"> Request Coffe </Button>
+    </StackPanel>
+</Window>
