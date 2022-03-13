@@ -20,11 +20,11 @@ namespace CoffeApp
             InitializeComponent();
 
             this.ServiceClient = new ServiceClient(new System.Net.Http.HttpClient());
-            var a = Enum.GetValues(typeof(DrinkType));
+            var drinktypeValues = Enum.GetValues(typeof(DrinkType));
             DrinkTypes = new List<DrinkTypeWrapper>();
-            foreach (var aa in a)
+            foreach (var value in drinktypeValues)
             {
-                DrinkTypes.Add(new DrinkTypeWrapper() { Value = aa.ToString() });
+                DrinkTypes.Add(new DrinkTypeWrapper() { Value = value.ToString() });
             }
             cmb_DrinkType.ItemsSource = DrinkTypes;
             cmb_DrinkType.SelectedItem = DrinkTypes[0];
