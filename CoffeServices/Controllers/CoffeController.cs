@@ -17,12 +17,6 @@ namespace CoffeServices.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public ActionResult<String> Get()
-        {
-            return Ok(" Welcome To The Jungle :)");
-        }
-
         [HttpPost]
         [Route("LastCoffe")]
         public async Task<ActionResult<Drink>> GetLatestCoffe([FromBody] Drink drink)

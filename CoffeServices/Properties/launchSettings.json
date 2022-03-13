@@ -20,7 +20,7 @@
     "CoffeServices": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "Coffe",
+      "launchUrl": "Swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
