@@ -8,8 +8,8 @@
         Title="Coffe App" Height="450" Width="800">
 
     <StackPanel>
-        <TextBlock Margin="140,0,0,0" FontFamily="Century Gothic" FontSize="12" Text="Add Your Budget Id to check you coffe History" />
-        <TextBox Name="TB_Budget" Margin="0,4,0,0" Width="500" ></TextBox>
+        <TextBlock Margin="140,0,0,0" FontFamily="Century Gothic" FontSize="12" Text="Add Your Badge Id to check you coffe History" />
+        <TextBox Name="TB_Badge" Margin="0,4,0,0" Width="500" ></TextBox>
         <Button Margin="0,4,0,0" FontFamily="arial" Width="500" Click="GetLatestCoffe">Check Latest Coffe</Button>
         <TextBlock Name="TB_Message" FontFamily="Century Gothic" Margin="140,4,0,0" FontSize="12" Text="Here is your last coffe" />
 

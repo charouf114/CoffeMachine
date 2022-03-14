@@ -7,7 +7,7 @@ namespace Coffe.Service.Common
     {
         [Required]
         [Key]
-        public string BudgetId { get; set; }
+        public string BadgeId { get; set; }
 
         public DrinkType DrinkType { get; set; }
 
@@ -17,9 +17,9 @@ namespace Coffe.Service.Common
 
        public DateTime? CreationDate { get; set; }
 
-        public Drink (string budgetId, DrinkType drinkType, int sucreCount, bool hasMug)
+        public Drink (string BadgeId, DrinkType drinkType, int sucreCount, bool hasMug)
         {
-            this.BudgetId = budgetId;
+            this.BadgeId = BadgeId;
             this.DrinkType = drinkType;
             this.SucreCount = sucreCount;
             this.HasMug = hasMug;

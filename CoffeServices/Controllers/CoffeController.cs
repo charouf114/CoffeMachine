@@ -56,7 +56,7 @@ namespace CoffeServices.Controllers
 
         private async Task<Drink> GetLatestDrink(Drink drink)
         {
-            return  await _context.Drink.Where(d => d.BudgetId == drink.BudgetId)
+            return  await _context.Drink.Where(d => d.BadgeId == drink.BadgeId)
                             .OrderByDescending(d => d.CreationDate)
                             .FirstOrDefaultAsync();
         }

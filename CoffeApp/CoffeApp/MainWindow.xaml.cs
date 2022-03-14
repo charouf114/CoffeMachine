@@ -33,17 +33,17 @@ namespace CoffeApp
 
         private async void GetLatestCoffe(object sender, RoutedEventArgs e)
         {
-            var budgetId = TB_Budget.Text;
-            if (!string.IsNullOrWhiteSpace(budgetId))
+            var BadgeId = TB_Badge.Text;
+            if (!string.IsNullOrWhiteSpace(BadgeId))
             {
-                Drink CoffeRequest = new Drink(budgetId, DrinkType.Coffe, 0, false);
+                Drink CoffeRequest = new Drink(BadgeId, DrinkType.Coffe, 0, false);
                 var result = await GetLatestCoffe(CoffeRequest);
                 if(result != null)
                 {
                     cmb_DrinkType.SelectedItem = DrinkTypes.FirstOrDefault( c => c.Value == result.DrinkType.ToString());
                     TB_SucarCount.Text = result.SucreCount.ToString();
                     CB_HasMug.IsChecked = result.HasMug;
-                    TB_Budget.Text = result.BudgetId;
+                    TB_Badge.Text = result.BadgeId;
                     TB_Message.Visibility = Visibility.Visible;
                 }
                 else
@@ -53,7 +53,7 @@ namespace CoffeApp
             }
             else
             {
-                MessageBox.Show("Please enter your budget identifier");
+                MessageBox.Show("Please enter your Badge identifier");
             }
 
         }
@@ -64,7 +64,7 @@ namespace CoffeApp
             var drinkType = drinkTypeWrapper is null ? null : drinkTypeWrapper.getCoffeType();
             var sucarCountAsStr = TB_SucarCount.Text;
             var hasMug = CB_HasMug.IsChecked;
-            var budgetId = TB_Budget.Text;
+            var BadgeId = TB_Badge.Text;
 
             List<string> errorList = new List<string>();
             if(!drinkType.HasValue)
@@ -82,14 +82,14 @@ namespace CoffeApp
                 errorList.Add("Please enter if you have a mug or Not");
             }
 
-            if (string.IsNullOrWhiteSpace(budgetId))
+            if (string.IsNullOrWhiteSpace(BadgeId))
             {
-                errorList.Add("Please enter your budget identifier");
+                errorList.Add("Please enter your Badge identifier");
             }
 
             if (errorList.Count == 0)
             {
-                Drink CoffeRequest = new Drink(budgetId, drinkType.Value, sucarCount, hasMug.Value);
+                Drink CoffeRequest = new Drink(BadgeId, drinkType.Value, sucarCount, hasMug.Value);
                 var result = await RequestCoffe(CoffeRequest);
                 if(result == null)
                 {

@@ -7,7 +7,7 @@ Server Side : CoffeServices Creaded on ASP.Net Core 3.1
 The DB Schema should be like this
 
 CREATE TABLE Drink.dbo.Drink (
-  BudgetId varchar(256) NOT NULL,
+  BadgeId varchar(256) NOT NULL,
   DrinkType int NOT NULL,
   SucreCount int NULL,
   HasMug bit NULL,

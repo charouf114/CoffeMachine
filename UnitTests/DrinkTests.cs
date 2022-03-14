@@ -18,7 +18,7 @@ namespace UnitTests
             // 1- Add 10 Drink for 10 differents badges
             for (int i=0; i< 10; ++i)
             {
-                Drink drink = new Drink($"badget_{i}_{i}",
+                Drink drink = new Drink($"badge_{i}_{i}",
                                     (DrinkType)(i % 3 + 1),
                                     sucreCount: i,
                                     hasMug: i % 2 == 0);
@@ -29,7 +29,7 @@ namespace UnitTests
             // 2- Get Latest Drink for each badge And Assert 
             for (int i = 0; i < 10; ++i)
             {
-                Drink drink = new Drink($"badget_{i}_{i}",
+                Drink drink = new Drink($"badge_{i}_{i}",
                                     DrinkType.Chocolat,
                                     sucreCount : 0,
                                     hasMug: false);
@@ -44,7 +44,7 @@ namespace UnitTests
             // 3- Update the half And Assert
             for (int i = 0; i < 5; ++i)
             {
-                Drink drink = new Drink($"badget_{i}_{i}",
+                Drink drink = new Drink($"badge_{i}_{i}",
                                     DrinkType.Chocolat,
                                     sucreCount: 0,
                                     hasMug: false);
@@ -60,7 +60,7 @@ namespace UnitTests
             // 4- Check the old  is Good
             for (int i = 5; i < 10; ++i)
             {
-                Drink drink = new Drink($"badget_{i}_{i}",
+                Drink drink = new Drink($"badge_{i}_{i}",
                                     DrinkType.Chocolat,
                                     sucreCount: 0,
                                     hasMug: false);
